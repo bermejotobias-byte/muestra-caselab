@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#ffffff">
+<title>Propuesta para Case Lab, por Bermejo Web</title>
+<meta name="description" content="Propuesta de diseño de Bermejo Web. No es la web oficial de Case Lab.">
+<link rel="icon" href="img/isotipo.svg">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<a class="saltar" href="#local">Ir a horarios y dirección</a>
+
+<p class="cinta">Propuesta de Bermejo Web. No es la web oficial de Case Lab.</p>
+<header class="tope">
+  <a class="marca" href="#inicio"><img src="img/isotipo.svg" alt="" width="30" height="36">Case Lab</a>
+  <p class="estado" data-estado>Horarios</p>
+  <a class="enlace" href="#fundas">Fundas</a>
+  <a class="enlace" href="#local">El local</a>
+</header>
+
+<main>
+<section class="escena" id="inicio" aria-label="Case Lab">
+  <div class="fijo">
+    <div class="negro" aria-hidden="true"></div>
+    <img class="mano-plana" src="img/isotipo.svg" alt="">
+    <canvas id="lienzo" aria-hidden="true"></canvas>
+
+    <div class="portada texto activo">
+      <h1>Case <br>Lab</h1>
+      <p class="lema">Fundas y accesorios para celulares.</p>
+      <div class="fila">
+        <button class="boton" data-wa="Hola, Case Lab. Busco una funda. Mi modelo es: ">Preguntar por tu modelo</button>
+        <button class="suave" data-otra>Otra funda</button>
+      </div>
+      <p class="dir">Bonifacini 1911, San Martín<br>Lunes a sábados de 10 a 19</p>
+    </div>
+
+    <div class="pared texto">
+      <h2 data-nombre></h2>
+      <p class="lema">Tocá cualquiera para verla a color.</p>
+      <div class="fila">
+        <button class="boton claro" data-estrella>Preguntar por esta</button>
+        <button class="suave" data-mezclar>Siguiente</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="galeria" id="fundas" aria-label="Fundas">
+  <div class="fijo">
+    <canvas id="trama" aria-hidden="true"></canvas>
+    <ol class="lista"></ol>
+    <div class="regla" aria-hidden="true"></div>
+    <button class="suave ver" data-color aria-pressed="false">Ver a color</button>
+  </div>
+</section>
+
+<section class="local" id="local">
+  <img class="frente" src="img/local.webp" alt="Frente del local de Case Lab" loading="lazy" width="640" height="1136">
+  <div class="cartel">
+    <p class="gigante" data-estado-grande>Horarios</p>
+    <table class="horarios"><caption class="solo-lector">Horarios de atención</caption><tbody></tbody></table>
+    <h2>Bonifacini 1911</h2>
+    <p>San Martín, Buenos Aires</p>
+    <div class="fila">
+      <a class="boton claro" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Case%20Lab%2C%20Bonifacini%201911%2C%20San%20Mart%C3%ADn%2C%20Buenos%20Aires">Cómo llegar</a>
+      <button class="suave" data-llamar>Llamar al 11 2857-5366</button>
+    </div>
+  </div>
+  <div class="mapa"><iframe title="Mapa de Case Lab, Bonifacini 1911, San Martín" loading="lazy" referrerpolicy="no-referrer" src="https://www.google.com/maps?q=Case%20Lab%2C%20Bonifacini%201911%2C%20San%20Mart%C3%ADn%2C%20Buenos%20Aires&z=16&output=embed"></iframe></div>
+</section>
+
+<section class="pedido">
+  <form id="formulario">
+    <p class="frase"><label for="modelo">Tengo un</label> <input id="modelo" name="modelo" required placeholder="iPhone 13" autocomplete="off"> <span id="busco">y busco</span></p>
+    <div class="opciones" role="group" aria-labelledby="busco">
+      <label><input type="radio" name="busca" value="una funda" checked><span>una funda</span></label>
+      <label><input type="radio" name="busca" value="un vidrio"><span>un vidrio</span></label>
+      <label><input type="radio" name="busca" value="un cable"><span>un cable</span></label>
+      <label><input type="radio" name="busca" value="un accesorio"><span>un accesorio</span></label>
+    </div>
+    <button class="boton">Mandar por WhatsApp</button>
+  </form>
+</section>
+</main>
+
+<footer>
+  <img src="img/isotipo.svg" alt="" width="64" height="76">
+  <p>Case Lab<br>Bonifacini 1911, San Martín<br>11 2857-5366</p>
+  <p><a target="_blank" rel="noopener" href="https://www.instagram.com/caselaboficial/">Instagram @caselaboficial</a></p>
+  <p>Propuesta de diseño hecha por Bermejo Web. No es la web oficial.<br>Marca y fotos: Case Lab. Los botones no mandan nada.</p>
+</footer>
+
+<nav class="barra" aria-label="Contacto rápido">
+  <button data-llamar>Llamar</button>
+  <button data-wa="Hola, Case Lab. Busco una funda. Mi modelo es: ">WhatsApp</button>
+</nav>
+
+<dialog id="aviso">
+  <p class="aviso-titulo"></p>
+  <blockquote></blockquote>
+  <p class="aviso-nota">Es una muestra: no se mandó nada. En la página publicada, esto abre directo en el teléfono.</p>
+  <form method="dialog"><button class="boton">Entendido</button></form>
+</dialog>
+
+<script src="app.js" defer></script>
+</body>
+</html>
